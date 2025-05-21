@@ -1,0 +1,47 @@
+1- Criar um diretório para a pasta do projeto
+2- Criar um ambiente virtual(isolar todas as dependências não bagunçar o python global)
+ - Rodar no terminal (python -m venv venv)
+3- Ativar o ambiente virtual 
+ - Rodar no terminal (venv\Scripts\activate)
+4- Instalar o Django
+ - Rodar no terminal (pip install django)
+ - Rodar no teminal (django-admin --version) para confirmar a instalação
+5- Criar o arquivo em django (app)
+ - Rodar no terminal (django-admin startproject app .)
+6- Rodar no terminal (python manage.py runserver) para poder testar o projeto(servidor local)
+ - Por padrão (servidor imbutido no Django) na porta 8000
+ - Se apareceu uma tela esta tud certo 
+
+# Entendendo as pastas
+
+7- Criar a primeira app para gerenciar o cadastro de carros
+ - Rodar no terminal(python manage.py startapp + nome da app "cars")
+8- Dentro do app (coração do projeto) ir até ele para dizer para o Django usar a app criada(cars)
+ - dentro de sttings.py/INSTALLED_APPS
+ - inserir o nome do app(cars)
+9- Comando (python manage.py makemigrations) montar um makemigrations - scripts de banco de dados - arquivo de códigos python
+10- Comando (python manage.py migrate) - escreve todas as estruturas básico
+11- Comando (python manage.py createsuperuser) - criando superuser = login: nael2019 senha: 180910
+
+----------------------------------------------------------------------
+# Desenvolvendo a Gestão de admin dos carros
+
+1- Começando com arquivo (models.py) - nome da tabela - gerenciar e armazenar os carros
+2- Primeria coisa a fazer e criar uma Class Car(models.Model): # Class car esta herdando a herança da (Class Model) - já esta pronta 
+3- Escrever os campos da tabela
+4- Rodar comando para dizer ao Django, que ele migre a tabela para o banco de dados
+5- Comando (python manage.py makemigrations) - percorre nossa aplicação e gera um arquivo Migrations de banco de dados com instatruções(scripts) para nosso banco de dados
+6- Rodar comando (python manage.py migrate) - faz o Django varrer a aplicação procurando por arquivos migrations, com instruções de banco de dados aplica através do ORM do Django e interpleta e traduz para SQL e executa 
+
+-----------------------------------------------------------------------------
+# Cadastrar carros
+
+Ideia e fazer que o Admin acesse o banco de dados e faz o cadastro 
+
+1- Dizer ao Django a entidade carros apareça para os administradores 
+2- admin.py - informar no painel carros registrar e configurar admin de carros
+
+------------------------------------------------------------------------------
+# Criar um gestão de marcas
+
+1- 
