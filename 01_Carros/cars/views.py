@@ -1,3 +1,6 @@
+
 from django.shortcuts import render
 
-# Create your views here.
+# função para view de carros.
+def cars_view(request):
+    return render(request, 'cars.html')
